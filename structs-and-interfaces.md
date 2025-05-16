@@ -49,7 +49,7 @@ type Person struct {
 
 // Setter method for name
 func (p *Person) SetName(newName string) {
-    if newName != "" {
+    if (newName != "") {
         p.name = newName
     }
 }
@@ -148,7 +148,7 @@ func main() {
 ## Aha! Moment
 > "Aha! In Go, the variables inside a struct are called fields, not properties. In languages like JavaScript, C#, or Python, 'properties' often refer to variables that can have custom getter and setter logic, allowing you to control how values are accessed or modified. In Go, struct fields are always accessed directly—there are no built-in getters or setters for fields. If you want to control access or add logic, you define explicit methods, but the fields themselves remain simple and direct. This makes Go's approach straightforward and explicit."
 
-> "I realized that Go's interfaces are satisfied implicitly, which makes the language very flexible and encourages composition over inheritance!"
+> "I realized that Go's interfaces are satisfied implicitly, which makes the language very flexible and encourages composition over inheritance! In Go, you don't need to declare that a type implements an interface—if it has the required methods, it just works. This is different from JavaScript/TypeScript, where you must explicitly declare that a class implements an interface. This implicit satisfaction means you can write more decoupled and flexible code, and types can satisfy multiple interfaces without extra boilerplate. It also encourages designing small, focused interfaces (sometimes called 'interface segregation'), making your code easier to test and extend. This is a powerful feature that supports Go's philosophy of simplicity and composability. __It's like, if it rhymes, it works.__"
 
 ---
 
